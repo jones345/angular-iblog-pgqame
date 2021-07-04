@@ -1,0 +1,67 @@
+<section class="myform-area">
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-lg-8">
+        
+            <div class="form-area login-form">
+                
+                    <div>
+                        <div class="form-content">
+                            <h2>Login or Sign up </h2>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla non aperiam cum quas quod reprehenderit.</p>
+                            <ul>
+                                <li><a href="#" class="facebook"><i class="fa fa-facebook-f"></i><span>facebook</span></a></li>
+                                <li><a href="#" class="twitter"><i class="fa fa-twitter"></i><span>twitter</span></a></li>
+                                <li><a (click)="GoogleAuth()" class="google"><i class="fa fa-google"></i><span>Google</span></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                
+                    <div class="form-input">
+                        <h2>Login with</h2>
+                        <form>
+                            <div class="form-group">
+                                <input type="email"  id="" name="name" #email required>
+                                <label>User Name</label>
+                            </div>
+                            <div class="form-group">
+                                <input type="password" id="" name="password" #password required>
+                                <label>password</label>
+                            </div>
+                            <div class="myform-button">
+                                <button (click)="authService.SignIn(email.value, password.value)" class="myform-btn">Login</button>
+                            </div>
+                        </form>
+                    </div>
+                    <label>
+                    <input type="radio" name="rotate-cube-side" value="front" checked /> front
+                  </label>
+            </div>
+            
+        </div>
+        
+    </div>
+</div>
+</section>
+
+<script>
+var box = document.querySelector('.box');
+var radioGroup = document.querySelector('.radio-group');
+var currentClass = '';
+
+function changeSide() {
+  var checkedRadio = radioGroup.querySelector(':checked');
+  var showClass = 'show-' + checkedRadio.value;
+  if ( currentClass ) {
+    box.classList.remove( currentClass );
+  }
+  box.classList.add( showClass );
+  currentClass = showClass;
+}
+// set initial side
+changeSide();
+
+radioGroup.addEventListener( 'change', changeSide );
+</script>
+
+
