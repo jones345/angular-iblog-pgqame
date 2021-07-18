@@ -36,6 +36,26 @@
                     <label>
                     <input type="radio" name="rotate-cube-side" value="front" checked /> front
                   </label>
+
+                  <div class="form-input">
+                  <h2>Sign up with</h2>
+                  <form>
+                      <div class="form-group">
+                          <input type="email"  id="" name="name" #email required>
+                          <label>User Name</label>
+                      </div>
+                      <div class="form-group">
+                          <input type="password" id="" name="password" #password required>
+                          <label>password</label>
+                      </div>
+                      <div class="myform-button">
+                          <button (click)="authService.SignIn(email.value, password.value)" class="myform-btn">Login</button>
+                      </div>
+                  </form>
+              </div>
+              <label>
+              <input type="radio" name="rotate-cube-side" value="front" checked /> front
+            </label>
             </div>
             
         </div>
